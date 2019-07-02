@@ -1,0 +1,632 @@
+{
+	"info": {
+		"_postman_id": "487e84f4-f714-4a89-bc55-70488ebca726",
+		"name": "binkl-api",
+		"description": "# Introduction\nBinkL server api\n\n# Overview\nNode JS v 10.16.0\nNPM v 6.9.0\nSequelize ORM v 5.8.7\nMysql\nPostman\n\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\n200 : OK\n404: Not found\n500: Internale server error\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				},
+				"description": "Get all users"
+			},
+			"response": [
+				{
+					"name": "get all users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "217"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d9-dSPXlsWl6sQoEubMXqc8ljPFrZU\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Jun 2019 08:49:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Jeram\",\n            \"password\": \"password\",\n            \"type\": 0,\n            \"contact\": \"contact\",\n            \"address\": \"adress\",\n            \"surname\": \"surname\",\n            \"email\": \"email\",\n            \"createdAt\": null,\n            \"updatedAt\": null\n        }\n    ],\n    \"count\": 1,\n    \"message\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get all selleres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/sellers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sellers"
+					]
+				},
+				"description": "Get all sellers"
+			},
+			"response": []
+		},
+		{
+			"name": "api index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "data",
+						"value": "data",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Jeram",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "jeramaaaa",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "contact",
+							"value": "0321546877",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Fianarantsoa",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ceetsfe",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "jeram",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete one user by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "data",
+						"value": "data",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "data",
+						"value": "data",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update users",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "data",
+						"value": "data",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find all sellers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/sellers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sellers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findOne sellers by criteria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "data",
+						"value": "data",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/sellers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sellers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add sellers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "departmentId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "parent",
+							"value": "parent",
+							"type": "text"
+						},
+						{
+							"key": "date_added",
+							"value": "NOW()",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/sellers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sellers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add sellers",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "userId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "departmentId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "parent",
+									"value": "parent",
+									"type": "text"
+								},
+								{
+									"key": "date_added",
+									"value": "NOW()",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/sellers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sellers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "209"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d1-NoKY4Hr43xhybETTeYLPH6KpbK0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Jun 2019 20:20:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"id\": 5,\n        \"userId\": \"1\",\n        \"departmentId\": \"1\",\n        \"parent\": \"parent\",\n        \"date_added\": null,\n        \"status\": \"1\",\n        \"updatedAt\": \"2019-06-11T20:20:12.082Z\",\n        \"createdAt\": \"2019-06-11T20:20:12.082Z\"\n    },\n    \"message\": \"Success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "edit sellers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "departmentId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "parent",
+							"value": "parent edited",
+							"type": "text"
+						},
+						{
+							"key": "date_added",
+							"value": "NOW()",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/sellers/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sellers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one sellers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/sellers/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sellers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
