@@ -1,0 +1,34 @@
+{
+  "name": "bink-back-office",
+  "version": "0.0.1",
+  "description": "Back Office pour Bink, API REST",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www"
+  },
+  "author": "Bink Team",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "core-util-is": "^1.0.2",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "http-errors": "^1.7.2",
+    "jsonwebtoken": "^8.5.1",
+    "less-middleware": "^3.1.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.8.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://alkaltd@dev.azure.com/alkaltd/Binkl%20Backoffice/_git/Binkl%20Backoffice"
+  },
+  "keywords": []
+}
