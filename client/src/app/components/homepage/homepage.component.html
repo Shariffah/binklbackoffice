@@ -1,0 +1,189 @@
+<div class="container">
+
+    <ngx-avatar class="avatarPricipale active" src="assets/images/ciel.jpg" matBadge="4" matBadgeOverlap="false" size="75"></ngx-avatar>
+
+    <!-- Step -->
+    <div class="ContentTimeline">
+        <div class="ContainerProgressbar">
+            <a routerLink="/" class="homeNav">Menu</a>
+            <ul class="progressbar">
+                <li class="active"></li>
+                <li routerLink="/seller-list"></li>
+                <li routerLink="/login"></li>
+                <li routerLink="/pipeline"></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <mat-card class="CardHomeHead ContentTimeShow">
+                <mat-card-content>
+                    <span class="time">{{ today | date:'hh:mm'}}</span>
+                    <span class="period">{{ today | date:'aa'}}</span>
+                </mat-card-content>
+                <mat-card-actions>
+                    <span class="day">{{ today | date:'EEEE, d MMMM'}}</span>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="CardHomeHead">
+                <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding', 'ContentSlideActus']">
+                    <div class="item" *ngFor="let image of images;let i= index">
+                        <img class="slide-image" src="{{image.image}}">
+                        <div class="slide-text">
+                            <span>{{image.text}}</span>
+                        </div>
+                    </div>
+                </owl-carousel>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="CardHomeHead ContentCalendar">
+                <img src="assets/images/ciel.jpg" alt="meteo">
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="mt-20">
+        <owl-carousel [options]="GrandCarouselOptions" [items]="grandimages" [carouselClasses]="['owl-theme', 'row', 'sliding', 'carousel-hopemage']">
+            <div class="item" *ngFor="let image of grandimages;let i= index">
+                <img class="slide-image" src="{{image.image}}">
+            </div>
+        </owl-carousel>
+    </div>
+
+    <div class="ContentNavigation">
+        <div class="row">
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#" class="active">
+                    <img src="../assets/images/tableau_bord.png" alt="Nav">
+                    <span>Tableau de bord</span>
+                </a>
+            </div>
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#">
+                    <img src="../assets/images/nom-assistant.png" alt="Nav">
+                    <span>Mon assistant</span>
+                </a>
+            </div>
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#">
+                    <img src="../assets/images/espace-travail.png" alt="Nav">
+                    <span>Mon espace de travail</span>
+                </a>
+            </div>
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#">
+                    <img src="../assets/images/classeurs.png" alt="Nav">
+                    <span>Mes classeurs</span>
+                </a>
+            </div>
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#">
+                    <img src="../assets/images/distractions.png" alt="Nav">
+                    <span>Distraction</span>
+                </a>
+            </div>
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#">
+                    <img src="../assets/images/page-surprises.png" alt="Nav">
+                    <span>Ma page surprise</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="Contentchats">
+        <ul>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats active" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats active" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats inactive" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats active" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats inactive" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats active" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats inactive" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats inactive" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats active" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats active" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats inactive" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats inactive" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats inactive" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats inactive" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats active" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats active" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats inactive" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats inactive" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats active" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+            <li>
+                <ngx-avatar class="avatarPricipaleChats active" src="assets/images/show_avatar.png" matBadge="4" matBadgeOverlap="false"
+                    size="50"></ngx-avatar>
+            </li>
+        </ul>
+    </div>
+
+    <div class="ShowMoreChats">
+        <img src="assets/images/more-chats.png" alt="More">
+    </div>
+
+</div>

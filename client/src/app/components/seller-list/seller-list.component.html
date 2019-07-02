@@ -1,0 +1,131 @@
+<div class="container">
+    <!-- Step -->
+    <div class="ContentTimeline">
+        <div class="ContainerProgressbar">
+            <a routerLink="/" class="homeNav">Menu</a>
+            <ul class="progressbar">
+                <li></li>
+                <li class="active" routerLink="/seller-list"></li>
+                <li routerLink="/login"></li>
+                <li routerLink="/pipeline"></li>
+                <li></li>
+            </ul>
+            <a routerLink="#" class="ActionNav">Supprimer</a>
+        </div>
+    </div>
+    <!-- fin -->
+    <div class="TableContainer">
+        <h3>Liste des vendeurs</h3>
+        <div class="fixHeight">
+            <table mat-table [dataSource]="dataSource" matSort>
+
+                <!-- Checkbox Column -->
+                <ng-container matColumnDef="select">
+                    <th mat-header-cell *matHeaderCellDef style="width:50px">
+                        <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()"
+                            [aria-label]="checkboxLabel()" (click)="AllSelectedCheckbox(isAllSelected())">
+                        </mat-checkbox>
+                    </th>
+                    <td mat-cell *matCellDef="let row" style="width:50px">
+                        <mat-checkbox (click)="OnclickCheckbox($event, row.nom, selection.isSelected(row))" (change)="$event ? selection.toggle(row) : null"
+                            [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                        </mat-checkbox>
+                    </td>
+                </ng-container>
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="nom">
+                    <th mat-header-cell *matHeaderCellDef style="width:150px"> Nom </th>
+                    <td mat-cell *matCellDef="let element" style="width:150px">
+                        <span class="customData">{{element.nom}}</span>
+                    </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="pays">
+                    <th mat-header-cell *matHeaderCellDef style="width:150px"> Pays </th>
+                    <td mat-cell *matCellDef="let element" style="width:150px">
+                        <span class="customData">{{element.pays}}</span>
+                    </td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef style="width:150px"> Date de Début </th>
+                    <td mat-cell *matCellDef="let element" style="width:150px">
+                        <span class="customData">{{element.date}}</span>
+                    </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="salaire">
+                    <th mat-header-cell *matHeaderCellDef style="width:100px"> Salaire </th>
+                    <td mat-cell *matCellDef="let element" style="width:100px">
+                        <span class="customData">{{element.salaire}}</span>
+                    </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="bbbb">
+                    <th mat-header-cell *matHeaderCellDef style="width:100px"> BBBBB </th>
+                    <td mat-cell *matCellDef="let element" style="width:100px">
+                        <span class="customData">{{element.bbbb}}</span>
+                    </td>
+                </ng-container>
+
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="aaaa">
+                    <th mat-header-cell *matHeaderCellDef style="width:100px"> AAAAA </th>
+                    <td mat-cell *matCellDef="let element" style="width:100px">
+                        <span class="customData">{{element.aaaa}}</span>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)" [ngClass]="{ 'HoverTr': rowSelected.indexOf(row.nom) >= 0 }">
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- fin tableau -->
+    <div class="ContentNavigation">
+        <div class="row">
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#" class="active">
+                    <img src="../assets/images/tableau_bord.png" alt="Nav">
+                    <span>Tableau de bord</span>
+                </a>
+            </div>
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#">
+                    <img src="../assets/images/nom-assistant.png" alt="Nav">
+                    <span>Mon assistant</span>
+                </a>
+            </div>
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#">
+                    <img src="../assets/images/espace-travail.png" alt="Nav">
+                    <span>Mon espace de travail</span>
+                </a>
+            </div>
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#">
+                    <img src="../assets/images/classeurs.png" alt="Nav">
+                    <span>Mes classeurs</span>
+                </a>
+            </div>
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#">
+                    <img src="../assets/images/distractions.png" alt="Nav">
+                    <span>Distraction</span>
+                </a>
+            </div>
+            <div class="col-sm-2 HoverStyle">
+                <a routerLink="#">
+                    <img src="../assets/images/page-surprises.png" alt="Nav">
+                    <span>Ma page surprise</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

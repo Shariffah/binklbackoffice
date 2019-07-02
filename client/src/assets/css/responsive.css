@@ -1,0 +1,74 @@
+/*Heritage bootstrap*/
+@media (min-width: 768px) {
+	.col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 640px) {
+	body {
+		font-size: 10px;
+	    overflow-x: hidden;
+	    background-size: inherit;
+	}
+ 	.col-sm-2.HoverStyle {
+	   	width: 16%;
+    	padding: 0;
+	}
+	.ContentNavigation {
+		width: 100%;
+		top: -50px;
+		left: 10px;
+	}
+	.ContentNavigation img {
+	    width: 40px;
+	}
+	.HoverStyle:hover span {
+	    font-size: 6px;
+	}
+	.ContentNavigation span {
+		font-size: 6px;
+	}
+	.TableContainer {
+		margin-top: 40px;
+		padding-top: 40px;
+		padding: 35px 8px 85px 2px;
+	}
+	.ContainerProgressbar {
+		width: 100%;
+	}
+	.TableContainer:before {
+	    top: -66px;
+    	left: 50px;
+	}
+	.TableContainer span.customData {
+		width: 150px;
+	}
+	#mat-checkbox-3 {
+	    width: 35px !important;
+    	display: block;
+	}
+	.FormLoginContent,
+	.FormLoginContent button.BtnFormulaire {
+		width: 100%;
+	}
+	.FormLoginContent .mat-form-field-wrapper {
+		width: 75%;
+	}
+	.FormLoginContent:before {
+	    right: 20px;
+	}
+}
